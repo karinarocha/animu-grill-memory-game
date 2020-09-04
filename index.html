@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" async></script>
+    <title>Memory Game</title>
+</head>
+<body>
+    <h1 class="page-title">Animu Grill Memory Game</h1>
+    <div class="overlay-text visible">
+        Click to Start
+    </div>
+    <div id="game-over-text" class="overlay-text ">
+        GAME OVER
+        <span class="overlay-text-small">Click to Restart</span>
+    </div>
+    <div id="victory-text" class="overlay-text ">
+        VICTORY 
+        <span class="overlay-text-small">Click to Restart</span>
+    </div>
+    <div class="game-container">
+        <div class="game-info-container">
+            <div class="game-info">
+                Time <span id="time-remaining">100</span>
+            </div>
+            <div class="game-info">
+                Flips <span id="flips">0</span>
+            </div>
+        </div>
+        <div class="card ">
+            <div class="card-back card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="animu-grill" src="Assets/Images/grill1.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="card-value" src="Assets/Images/g1.png">
+
+            </div>
+        </div>
+        <div class="card ">
+            <div class="card-back card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="animu-grill" src="Assets/Images/grill1.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="card-value" src="Assets/Images/g1.png">
+
+            </div>
+        </div>
+        <div class="card ">
+            <div class="card-back card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="animu-grill" src="Assets/Images/grill1.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="card-value" src="Assets/Images/g2.png">
+
+            </div>
+        </div>
+        <div class="card ">
+            <div class="card-back card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="animu-grill" src="Assets/Images/grill1.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="card-value" src="Assets/Images/g2.png">
+
+            </div>
+        </div>
+        <div class="card ">
+            <div class="card-back card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="animu-grill" src="Assets/Images/grill1.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="card-value" src="Assets/Images/g3.png">
+
+            </div>
+        </div>
+        <div class="card ">
+            <div class="card-back card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="animu-grill" src="Assets/Images/grill1.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="card-value" src="Assets/Images/g3.png">
+
+            </div>
+        </div>
+        <div class="card ">
+            <div class="card-back card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="animu-grill" src="Assets/Images/grill1.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="card-value" src="Assets/Images/g4.png">
+
+            </div>
+        </div>
+        <div class="card ">
+            <div class="card-back card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="animu-grill" src="Assets/Images/grill1.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="card-value" src="Assets/Images/g4.png">
+
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="animu-grill" src="Assets/Images/grill1.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="card-value" src="Assets/Images/g5.png">
+
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="animu-grill" src="Assets/Images/grill1.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="card-value" src="Assets/Images/g5.png">
+
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="animu-grill" src="Assets/Images/grill1.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="card-value" src="Assets/Images/g6.png">
+
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="animu-grill" src="Assets/Images/grill1.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="card-value" src="Assets/Images/g6.png">
+
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="animu-grill" src="Assets/Images/grill1.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="card-value" src="Assets/Images/g7.png">
+
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="animu-grill" src="Assets/Images/grill1.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="card-value" src="Assets/Images/g7.png">
+
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="animu-grill" src="Assets/Images/grill1.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="card-value" src="Assets/Images/g8.png">
+
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="animu-grill" src="Assets/Images/grill1.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="card-value" src="Assets/Images/g8.png">
+
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="animu-grill" src="Assets/Images/grill1.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="card-value" src="Assets/Images/g99.png">
+
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="animu-grill" src="Assets/Images/grill1.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="flowers flowers-top-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-top-right" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-left" src="Assets/Images/flowers.png">
+                <img class="flowers flowers-bottom-right" src="Assets/Images/flowers.png">
+                <img class="card-value" src="Assets/Images/g99.png">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
